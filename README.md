@@ -23,11 +23,38 @@ Commit your code regularly and meaningfully. This practice helps both you (in ca
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your answers beforehand.
 
 1. Hashing functions
+  - In simple terms, a hash function maps a big number or string to a small integer that can be used as the index in the hash table.
+
 2. Collision resolution
+  - Collision: A collision occurs when two keys are hashed to the same index in a hash table.
+
+Open Addressing and Linear Probing:
+   -  One method is to start at the collision location and move sequentially through the slots in the hash table until we find an empty slot. That empty slot is used instead of the original collision location. To cover the entire hash table, sometimes you even have to go back to the first slot (circularly). This type of collision resolution is called open addressing with linear probing.
+
+Chaining
+  - In the chaining approach, the hash table is an array of linked lists i.e., each index has its own linked list.
+
+  All key-value pairs mapping to the same index will be stored in the linked list of that index.
+The benefits of chaining
+  - Through chaining, insertion in a hash table always occurs in `O(1)` since linked - lists allow insertion in constant time.
+  - Theoretically, a chained hash table can grow infinitely as long as there is enough space.
+A hash table which uses chaining will never need to be resized.
+
 3. Performance of basic hash table operations
+- Insert: `O(1)`, Deletion: `O(1)`, worst `O(n)`, Access: `O(1)`, worst `O(n)`
+
 4. Load factor
+You take the number of items stored in the hash table divided by the number of slots.
+
 5. Automatic resizing
+- The general rule of thumb is to resize your hash table when your load factor is greater than 0.7. Also, when you resize, it is common to double the size of the hash table. When you resize the array, you need to re-insert all of the items into this new hash table. You cannot simply copy the old items into the new hash table. Each item has to be rerun through the hashing function because the hashing function takes into account the size of the hash table when determining the index that it returns.
+
 6. Various use cases for hash tables
+- a digital phone book (maps a person’s name to their phone number).
+  - DNS resolution (maps a web address to an IP address).
+  - student records (a unique student id maps to student information).
+  - library system (a book’s unique identifier maps to detailed book information).
+  
 
 We expect you to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
