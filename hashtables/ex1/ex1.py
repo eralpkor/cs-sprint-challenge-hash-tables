@@ -19,3 +19,4 @@ def get_indices_of_item_weights(weights, length, limit):
 
 weights = [4, 6, 10, 15, 16]
 print(get_indices_of_item_weights(weights, 5, 21))
+#EOF
