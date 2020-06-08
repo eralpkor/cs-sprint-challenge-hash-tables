@@ -9,6 +9,7 @@ def has_negatives(arr):
         # if the number have correspinding negative numbers
         # add positive to array, no zeros
         if num != 0 and -num in collect_numbers:
+            # push the absolute value to the result array
             result.append(abs(num))
 
     return result
