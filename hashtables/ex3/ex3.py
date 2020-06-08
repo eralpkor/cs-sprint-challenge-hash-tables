@@ -1,10 +1,17 @@
 def intersection(arrays):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+    # add all occurrences for every number
+    cache = {}
 
-    return result
+    for arr in arrays:
+        for num in arr:
+            if num in cache:
+                cache[num] += 1
+            else:
+                cache[num] = 1
+
+    # only the items have an occurrence will be returned
+    return [item[0] for item in cache.items() if item[1] == len(arrays)]
+
 
 
 if __name__ == "__main__":
@@ -15,3 +22,4 @@ if __name__ == "__main__":
     arrays.append(list(range(3000000, 4000000)) + [1, 2, 3])
 
     print(intersection(arrays))
+
