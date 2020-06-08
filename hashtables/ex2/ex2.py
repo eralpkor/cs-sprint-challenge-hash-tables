@@ -39,6 +39,4 @@ tickets = [ticket_1, ticket_2, ticket_3]
 
 result = reconstruct_trip(tickets, 3) # ["PDX", "DCA", "NONE"]
 
-print(ticket_1.source, ticket_1.destination)
-
 print(result)
