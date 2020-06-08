@@ -22,6 +22,8 @@ Commit your code regularly and meaningfully. This practice helps both you (in ca
 
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your answers beforehand.
 
+-- A hash procedure must be deterministic—meaning that for a given input value it must always generate the same hash value. In other words, it must be a function of the data to be hashed, in the mathematical sense of the term.
+
 1. Hashing functions
   - In simple terms, a hash function maps a big number or string to a small integer that can be used as the index in the hash table.
 

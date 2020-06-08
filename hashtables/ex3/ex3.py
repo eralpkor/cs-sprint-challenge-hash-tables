@@ -10,6 +10,7 @@ def intersection(arrays):
                 cache[num] = 1
 
     # only the items have an occurrence will be returned
+    # if values occur array length times, it means that int is in all arrays
     return [item[0] for item in cache.items() if item[1] == len(arrays)]
 
 

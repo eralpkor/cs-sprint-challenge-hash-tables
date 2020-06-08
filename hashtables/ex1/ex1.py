@@ -11,6 +11,7 @@ def get_indices_of_item_weights(weights, length, limit):
 
             return (i, previously_seen_index)
 
+        # subtract and add to the key. Add index as a value
         cache[limit - weights[i]] = i
 
     return None
