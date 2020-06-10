@@ -14,7 +14,8 @@ def reconstruct_trip(tickets, length):
     for ticket in tickets:
         destinations[ticket.source] = ticket.destination
 
-    # first tickey always starts with 'NONE', it's a starting point to build a chain
+    # first ticket always starts with 'NONE', it's a starting point to build
+    #  a chain of tickets
     next_destination = destinations['NONE'] # first 
 
     # check each ticket's next destination,
@@ -38,7 +39,5 @@ ticket_3 = Ticket("DCA", "NONE")
 tickets = [ticket_1, ticket_2, ticket_3]
 
 result = reconstruct_trip(tickets, 3) # ["PDX", "DCA", "NONE"]
-
-print(ticket_1.source, ticket_1.destination)
 
 print(result)
